@@ -3,6 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import createHomePage from './home';
 import createMenuPage from './menu';
 import createContactPage from './contact';
+import createRestaurantFooter from './footer';
 
 function clearContent() {
     const content = document.getElementById('content');
@@ -54,6 +55,9 @@ function initializeWebsite() {
         content.appendChild(createContactPage());
     });
 }
+
+const footer = createRestaurantFooter();
+document.body.appendChild(footer);
 
 document.addEventListener('DOMContentLoaded', initializeWebsite);
 
